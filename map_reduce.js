@@ -7,4 +7,3 @@ Array.prototype.mep = function mep(func) {
 };
 
 [1,2,3,4].mep(sumsFour);
-
