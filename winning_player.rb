@@ -12,6 +12,10 @@ class Player
     all_players.reduce(&compare)
   end
 
+  def self.best_score(all_players)
+    all_players.map(&:score).max
+  end
+
   def self.all_players
     @@all_players
   end
@@ -25,5 +29,5 @@ Player.add_player Player.new('Peter', 7.2)
 Player.add_player Player.new('Steve', 8.2)
 Player.add_player Player.new('Bruce', 9.2)
 
-winner = Player.winner_player(Player.all_players)
-puts "Best score: #{winner.score}"
+score = player.best_score(player.all_players)
+puts "best score: #{score}"
